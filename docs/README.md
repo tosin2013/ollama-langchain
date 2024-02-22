@@ -19,8 +19,8 @@
 
 ## Usage Examples
 
-- **Starting OLLAMA with a Model**: To start OLLAMA with a specific model, run the script followed by the model name. For example, `./script.sh gemma` starts OLLAMA with the "gemma" model.
-- **Uninstalling a Model**: To uninstall a model, use the `-u` flag followed by the model name, e.g., `./script.sh -u gemma`.
+- **Starting OLLAMA with a Model**: To start OLLAMA with a specific model, run the script followed by the model name. For example, `./start_ollama.sh gemma` starts OLLAMA with the "gemma" model.
+- **Uninstalling a Model**: To uninstall a model, use the `-u` flag followed by the model name, e.g., `./start_ollama.sh -u gemma`.
 - **Selecting a Model to Run**: Without any arguments, the script presents a menu of available models for the user to choose from.
 
 ## Additional Context
