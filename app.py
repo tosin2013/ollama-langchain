@@ -1,8 +1,9 @@
 from langchain_community.llms import Ollama
 import streamlit as st
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-
-llm = Ollama(model="phi:latest", base_url="http://ollama-container:11434", verbose=True)
+endpoint = "127.0.0.1" #"ollama-container"
+model_name = "mistral"
+llm = Ollama(model=model_name+":latest", base_url="http://"+endpoint+":11434", verbose=True)
 
 def sendPrompt(prompt):
     global llm
