@@ -30,7 +30,7 @@ function start_ollama() {
   # Updated sed pattern for dynamic model name change:
     sed -i "s/model_name = .*/model_name = \"$selected_model\"/" app.py
 
-  ollama serve &
+  OLLAMA_HOST=0.0.0.0 ollama serve &
   ollama run $selected_model
 }
 
@@ -43,7 +43,7 @@ if [[ $# -eq 2 ]]; then
 
     if [[ " ${model_names[*]} " =~ " ${model_to_uninstall} " ]]; then
       echo "Uninstalling model: $model_to_uninstall"
-      ollama serve &
+      OLLAMA_HOST=0.0.0.0 ollama serve &
       ollama rm $model_to_uninstall
     else
       echo "Invalid model name."
